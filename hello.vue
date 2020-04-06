@@ -33,11 +33,10 @@ module.exports = {
     created () {
         huds.config2vueprop("hello", this)
         Mousetrap.bind("space", (e) => {
-            huds.send(huds.id, "hello.event=bounce")
+            huds.send("hello.bounce")
         })
-        huds.bind("hello", [ "event" ], (key, val) => {
-            if (val === "bounce")
-                this.$emit("bounce")
+        huds.bind("hello.bounce", (event, data) => {
+            this.$emit("bounce")
         })
         this.$on("bounce", () => {
             anime.timeline({
