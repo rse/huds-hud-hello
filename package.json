@@ -1,7 +1,7 @@
 {
     "name":                    "huds-hud-hello",
     "description":             "Hello World HUD",
-    "version":                 "1.0.4",
+    "version":                 "1.0.5",
     "author": {
         "name":                "Dr. Ralf S. Engelschall",
         "email":               "rse@engelschall.com",
