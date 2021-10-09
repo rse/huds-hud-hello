@@ -24,6 +24,6 @@
         "animejs":             "3.2.1"
     },
     "scripts": {
-        "test":                "node ../huds/src/huds-server.js -v3 -a 0.0.0.0 -p 9999 -d hello:.,hello.yaml"
+        "test":                "node ../huds/src/huds-server.js -v3 -a 0.0.0.0 -p 9999 -d hello:.,index.yaml"
     }
 }
