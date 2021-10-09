@@ -2,11 +2,10 @@
 <template>
     <div v-bind:style="style" class="hello">
         {{ text }}
-        </div>
     </div>
 </template>
 
-<style scoped>
+<style lang="less" scoped>
 .hello {
     position:         absolute;
     top:              100px;
@@ -31,14 +30,15 @@ module.exports = {
         style: HUDS.vueprop2cssvar()
     },
     created () {
-        huds.config2vueprop("hello", this)
         Mousetrap.bind("space", (e) => {
             huds.send("hello.bounce")
         })
         huds.bind("hello.bounce", (event, data) => {
-            this.$emit("bounce")
+            this.bounce()
         })
-        this.$on("bounce", () => {
+    },
+    methods: {
+        bounce () {
             anime.timeline({
                 targets:   this.$el,
                 duration:  400,
@@ -49,7 +49,7 @@ module.exports = {
             })
             .add({ scaleX: 2.00, scaleY: 2.00 })
             .add({ scaleX: 1.00, scaleY: 1.00 })
-        })
+        }
     }
 }
 </script>
