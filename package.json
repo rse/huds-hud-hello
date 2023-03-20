@@ -24,7 +24,7 @@
         "huds":                ">=2.0.0"
     },
     "devDependencies": {
-        "huds":                ">=2.0.0"
+        "huds":                "2.0.7"
     },
     "scripts": {
         "test":                "huds -v3 -a 0.0.0.0 -p 9999 -d hello:.,index.yaml"
