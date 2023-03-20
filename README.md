@@ -58,7 +58,7 @@ Use the following steps to run the HUD it:
 3.  Now you can also remotely trigger the bounce event with:
 
     ```sh
-	curl -D- http://hello:hello@127.0.0.1:9999/hello/event/hello.event=bounce
+	curl -D- http://hello:hello@127.0.0.1:9999/hello/event/hello.bounce
     ```
 
     One convenient way to trigger the event during your broadcasting
