@@ -11,7 +11,7 @@
 </style>
 
 <script>
-module.exports = {
+export default {
     name: "index",
     data: () => ({
         config: huds.config()

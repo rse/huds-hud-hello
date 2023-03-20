@@ -19,7 +19,7 @@
 </style>
 
 <script>
-module.exports = {
+export default {
     name: "hello",
     props: {
         background: { type: String, default: "#f0f0f0"     },
