@@ -14,19 +14,22 @@ the top-left corner, but its colors and text can be configured and the
 banner can be bounced by either pressing the SPACE key in an OBS Studio
 interaction window or by sending the underlying REST event to HUDS.
 
-Use the following steps to run the HUD it:
+Use the following steps to run the HUD:
 
-1.  Install this HUD either as an NPM package with...
+1.  Install HUDS and this HUD either as global NPM packages with...
 
     ```sh
-    $ npm install huds-hud-hello
+    $ npm install -g huds huds-hud-hello
     ```
 
-    ...or just clone its Git repository (in case you want to fiddle around
-    with its source code) with:
+    ...or just clone the Git repositories (in case you want to fiddle around
+    with the source code) with:
 
     ```sh
+    $ git clone https://github.com/rse/huds
+    $ (cd huds && npm install)
     $ git clone https://github.com/rse/huds-hud-hello
+    $ (cd huds-hud-hello && npm install)
     ```
 
 2.  Start [HUDS](http://npmjs.com/huds) with either...
@@ -35,10 +38,11 @@ Use the following steps to run the HUD it:
     $ huds -a 127.0.0.1 -p 9999 -U hello -P hello -d hello:@huds-hud-hello
     ```
 
-    ...or (in case of a cloned repository):
+    ...or (in case of cloned repositories):
 
     ```sh
-    $ huds -a 127.0.0.1 -p 9999 -U hello -P hello -d hello:huds-hud-hello,huds-hud-hello/hello.yaml
+    $ node huds/src/huds-server-cli.js -a 127.0.0.1 -p 9999 -U hello -P hello \
+      -d hello:huds-hud-hello,huds-hud-hello/hello.yaml
     ```
 
     HUDS will display its logging output to the terminal.
