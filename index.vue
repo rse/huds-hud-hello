@@ -7,9 +7,6 @@
     ></hello>
 </template>
 
-<style lang="less" scoped>
-</style>
-
 <script>
 export default {
     name: "index",
