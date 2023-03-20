@@ -13,9 +13,6 @@
         "client":              "index.html",
         "server":              "index.js"
     },
-    "peerDependencies": {
-        "huds":                ">=1.6.0"
-    },
     "dependencies": {
         "vue":                 "3.2.47",
         "vue3-sfc-loader":     "0.8.4",
@@ -23,7 +20,13 @@
         "mousetrap":           "1.6.5",
         "animejs":             "3.2.1"
     },
+    "peerDependencies": {
+        "huds":                ">=2.0.0"
+    },
+    "devDependencies": {
+        "huds":                ">=2.0.0"
+    },
     "scripts": {
-        "test":                "node ../huds/src/huds-server-cli.js -v3 -a 0.0.0.0 -p 9999 -d hello:.,index.yaml"
+        "test":                "huds -v3 -a 0.0.0.0 -p 9999 -d hello:.,index.yaml"
     }
 }
